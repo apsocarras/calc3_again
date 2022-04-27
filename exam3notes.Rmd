@@ -145,5 +145,29 @@ Then compute $\displaystyle P(X + Y < 20) = \iint f(x,y) \ dA = \int_0^{20} \int
  
 ## 15.6 - Change of Variables
 
+```{r}
+knitr::include_graphics("rmd_notebooks/15-6_fig2.png")
+```
+
+
+```{r}
+knitr::include_graphics("rmd_notebooks/15-6_fig3.png")
+```
+
+ The **Jacobian Determinant** (Jacobian) of $T(u,v) = (x(u,v),y(u,v))$ helps calculate the area under a transformation (given numerous assumptions...): 
+ 
+ $\displaystyle \iint_R f(x,y) \ dA = \iint_S f(x(u,v), y(u,v))$ $\bigg | \frac{\partial (x,y)}{\partial (u,v)}\bigg | dudv$
+ 
+ It can also *estimate* the area: $\text{Area}(T(D)) \approx \bigg | \text{Jac}(T)\bigg | \text{Area}(D)$, $dA = \bigg |\frac{\partial (x,y)}{\partial (u,v)} \bigg | dudv$
+ 
+
+```{r}
+knitr::include_graphics("rmd_notebooks/15-6_fig4.png")
+```
+
+
+```{r}
+
+```
 
 
