@@ -1,0 +1,71 @@
+---
+title: "Exam 3 Notes"
+author: "Alex Socarras"
+date: "4/26/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Chapter 15 - Multiple Integration
+
+## 15.1 - Two-Variable Integration Over Rectangles
+
+$\displaystyle \bigg (\int_c^d \bigg ( \int_a^b f(x,y)dx \bigg )dy \bigg )$
+
+$\displaystyle f_{avg} = \frac{1}{A(R)} \iint_R f(x,y) \ dA$  
+
+$\displaystyle \iint_R f(x,y) \ dA \pm \iint_R g(x,y) \ dA = \iint_R f(x,y) \pm g(x,y) \ dA$
+
+$\displaystyle \iint_R cf(x,y) \ dA = c \iint_R f(x,y) \ dA$
+
+$\displaystyle \forall (x,y) \in \mathbb{R}^2, \ \  f(x,y) \geq g(x,y) \implies \iint_R f(x,y) \ dA \geq \iint_R g(x,y) \ dA$
+
+$\displaystyle V = \iint_R f(x,y) - g(x,y) \ dA$ where $f(x,y)$ is top surface, $g(x,y)$ bottom
+ 
+**Fubini's Theorem**: If *f* is continuous on the rectangle  $R = \{(x,y) \mid [a,b] \times [c,d]\}$, then: 
+
+$\displaystyle \iint_R f(x,y) \ dA = \int_a^b \int_c^d f(x,y)dydx = \int_c^d \int_a^b f(x,y) dxdy$
+
+*Partial* wrt *y*: $A(x) = \displaystyle \int_c^d f(x,y)dy \qquad$ ($A(x)$ possibly in terms of *x*)
+
+*Partial* wrt *x*: $\displaystyle \int_a^b A(x)dx \ = \int_a^b \int_c^d f(x,y)dydx$
+
+
+## 15.2 - Double Integrals Over More General Regions
+
+### Vertically Simple (top, bottom terms of x)
+
+$D = \{(x,y) \mid [a,b] \times [g_1(x),g_2(x)]\}$
+
+If $f$ is continuous on $D$, $\displaystyle \iint_R f(x,y) \ dA = \int_a^b \int_{g_1(x)}^{g_2(x)}f(x,y) dydx$
+
+```{r}
+knitr::include_graphics("rmd_notebooks/15-2_fig1.png")
+```
+
+
+
+### Horizontally Simple (left, right terms of y)
+
+$D = \{(x,y) \mid  [h_1(y),h_2(y)] \times [c,d]\}$ 
+
+If *f* is continuous *D*, $\displaystyle \iint_D f(x,y) \ dA = \int_c^d \int_{h_1(y)}^{h_2(y)} f(x,y)dxdy$
+```{r}
+knitr::include_graphics("rmd_notebooks/15-2_fig2.png")
+```
+
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
